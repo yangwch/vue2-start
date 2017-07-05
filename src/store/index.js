@@ -8,11 +8,17 @@ const state = {
 	adminInfo: {
 		avatar: 'default.jpg'
 	},
+	_pageData: {
+	}
 }
 
 const mutations = {
 	saveAdminInfo(state, adminInfo){
 		state.adminInfo = adminInfo;
+	},
+	/*页面参数*/
+	savePageData(state, _pageData){
+		state._pageData = _pageData;
 	}
 }
 
@@ -28,6 +34,9 @@ const actions = {
 		}catch(err){
 			console.log('您尚未登陆或者session失效')
 		}
+	},
+	sendPageData({commit}, _pageData){
+		commit('savePageData', _pageData);
 	}
 }
 
