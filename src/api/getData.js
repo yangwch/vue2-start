@@ -26,7 +26,7 @@ export const getUserMenu = () => fetch('/static/data/userMenu.json');
  * 获取用户信息
  */
 
-export const getAdminInfo = () => fetch('/admin/info');
+export const getAdminInfo = () => fetch('/static/data/userInfo.json');
 
 /**
  * api请求量
