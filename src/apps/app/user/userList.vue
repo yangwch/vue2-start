@@ -163,6 +163,9 @@
             },
             onSubmit: function(){
             	
+            },
+            onSearch: function function_name(argument) {
+              // body...
             }
         },
     }

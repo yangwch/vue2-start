@@ -24,7 +24,11 @@
 	</div>
 	</div>
 </template>
-
+<style lang="less">
+	.el-table__body tr.current-row>td, .el-table--striped .el-table__body tr.el-table__row--striped.current-row td {
+	    background: #d6e0e8;
+	}
+</style>
 <script>
 	export default {
 		props: {
