@@ -46,7 +46,7 @@
 </template>
 
 <script>
-    import list from './../../plugin/list'
+    import list from './../../plugin/listTemp/list'
     import editPage from './edit'
     import { getLoginList } from '@/api/getData'
 

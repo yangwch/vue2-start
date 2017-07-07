@@ -43,7 +43,7 @@ const routes = [
 		},{
 			path: '/loginList',
 			component: loginList,
-			meta: ['数据管理', '用户登录记录']
+			meta: ['数据管理','用户', '用户登录记录']
 		}
 		/*,{
 			path: '/addShop',

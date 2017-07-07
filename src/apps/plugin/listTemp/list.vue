@@ -42,7 +42,7 @@
 }
 </style>
 <script>
-	import tablePlugin from './table'
+	import tablePlugin from './../table/table'
 	export default {
 		props: {
 			/*列宽是否自撑开*/

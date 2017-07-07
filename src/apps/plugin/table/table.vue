@@ -1,3 +1,4 @@
+<!-- 表格组件，支持分页 -->
 <template>
 	<div>
 	<el-table

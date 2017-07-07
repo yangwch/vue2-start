@@ -14,10 +14,10 @@
 				},
 				{ "id": 7,"displayName": "数据管理23", "url": "", "icon": "el-icon-document",
 					"children":[
-						{ "id": 8,"displayName": "用户", "icon": "el-icon-document", "children": [
-							{ "displayName": "用户登录记录", "index": "loginList2", "url": "/loginList" }
+						{ "id": 8,"displayName": "用户2", "icon": "el-icon-document", "children": [
+							{ "displayName": "用户登录记录2", "index": "loginList2", "url": "/loginList2" }
 						]},
-						{ "id": 9,"displayName": "用户列表","index": "userList2", "url": "/userList" }
+						{ "id": 9,"displayName": "用户列表2","index": "userList2", "url": "/userList2" }
 					]
 				}
 			]

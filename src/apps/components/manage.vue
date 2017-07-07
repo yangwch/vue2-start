@@ -17,8 +17,8 @@
 			</el-row>
 		</header>
 		<el-row style="height: 100%;">
-			<el-col :span="4" style="min-height: 100%; background-color: #324157;">
-				<el-menu :default-active="defaultActive" style="min-height: 100%;" theme="dark" router>
+			<el-col :span="4" style="height: 100%; background-color: #324157;">
+				<el-menu :default-active="defaultActive" theme="dark" router>
 					<template v-for="(item, index) in subMenus">
 						<!-- 有子菜单 -->
 						<template v-if="item.children && item.children.length">
@@ -31,11 +31,11 @@
 									<template v-if="childItem.children && childItem.children.length">
 										<el-submenu :index="index + '-' + childIndex">
 											<template slot="title">{{childItem.displayName}}</template>
-											<el-menu-item v-for="(l3child,l3index) in childItem.children" :index="l3child.index">{{l3child.displayName}}</el-menu-item>
+											<el-menu-item v-for="(l3child,l3index) in childItem.children" :index="l3child.url">{{l3child.displayName}}</el-menu-item>
 										</el-submenu>
 									</template>
 									<template v-if="childItem.children == null || (childItem.children && childItem.children.length == 0)">
-										<el-menu-item :index="childItem.index">
+										<el-menu-item :index="childItem.url">
 										{{childItem.displayName}}
 										</el-menu-item>
 									</template>
@@ -45,7 +45,7 @@
 						</template>
 						<!-- 无子菜单 -->
 						<template v-if="item.children == null || (item.children && item.children.length == 0)">
-							<el-menu-item :index="item.index || index.toString()">
+							<el-menu-item :index="item.url">
 								<i :class="item.icon || ''"></i>{{item.displayName}}
 							</el-menu-item>
 						</template>
@@ -88,6 +88,7 @@
 			cursor: pointer;
 			text-align: center;
 			display: inline-block;
+			transition: background,color .5s;
 			&.active{
 				background: rgb(30,44,60);
 				color: rgb(33, 154, 242);
@@ -120,7 +121,7 @@
 		},
 		computed: {
 			defaultActive: function(){
-				return  this.$route.path.replace('/', '');
+				return  this.$route.path;
 			}
 		},
 		created(){
