@@ -22,7 +22,7 @@
 			</el-col>
 		</el-row>
 
-		<table-plugin ref="tablePl"
+		<yt-table ref="tablePl"
 			:fit="fit"
 			:stripe="stripe"
 			:pagination="pagination"
@@ -32,7 +32,7 @@
                 <slot name="columns">
                 </slot>
             </template>
-        </table-plugin>
+        </yt-table>
 	</el-card>
 </template>
 
@@ -42,7 +42,6 @@
 }
 </style>
 <script>
-	import tablePlugin from './../table/table'
 	export default {
 		props: {
 			/*列宽是否自撑开*/
@@ -110,7 +109,7 @@
 			}
 		},
 		components: {
-			tablePlugin
+			
 		},
 		created(){
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="header_container">
+	<div class="header_container">
 
 		<el-breadcrumb separator="/">
 			<el-breadcrumb-item :to="{ path: '/manage' }">首页</el-breadcrumb-item>
@@ -12,7 +12,7 @@
 				<el-dropdown-item command="singout">退出</el-dropdown-item>
 			</el-dropdown-menu>
 		</el-dropdown>
-    </div>
+	</div>
 </template>
 
 <script>
@@ -20,20 +20,20 @@
 	import {baseImgPath} from '@/config/env'
 	import {mapActions, mapState} from 'vuex'
 
-    export default {
-    	data(){
-    		return {
-    			baseImgPath,
-    		}
-    	},
-    	created(){
-    		if (!this.adminInfo.id) {
-    			this.getAdminData()
-    		}
-    	},
-    	computed: {
-    		...mapState(['adminInfo']),
-    	},
+	export default {
+		data(){
+			return {
+				baseImgPath,
+			}
+		},
+		created(){
+			if (!this.adminInfo.id) {
+				this.getAdminData()
+			}
+		},
+		computed: {
+			...mapState(['adminInfo']),
+		},
 		methods: {
 			...mapActions(['getAdminData']),
 			async handleCommand(command) {
@@ -43,20 +43,20 @@
 					const res = await signout()
 					if (res.status == 1) {
 						this.$message({
-	                        type: 'success',
-	                        message: '退出成功'
-	                    });
-	                    this.$router.push('/');
+							type: 'success',
+							message: '退出成功'
+						});
+						this.$router.push('/');
 					}else{
 						this.$message({
-	                        type: 'error',
-	                        message: res.message
-	                    });
+							type: 'error',
+							message: res.message
+						});
 					}
 				}
 			},
 		}
-    }
+	}
 </script>
 
 <style lang="less">
@@ -75,6 +75,6 @@
 		margin-right: 37px;
 	}
 	.el-dropdown-menu__item{
-        text-align: center;
-    }
+		text-align: center;
+	}
 </style>

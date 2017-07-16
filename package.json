@@ -1,8 +1,8 @@
 {
-  "name": "vue2-manage",
+  "name": "vue2-start",
   "version": "1.0.0",
-  "description": "vue2-manage",
-  "author": "",
+  "description": "vue2-start",
+  "author": "yangwp",
   "license": "GPL",
   "private": true,
   "scripts": {

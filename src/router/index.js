@@ -9,9 +9,6 @@ const manage = r => require.ensure([], () => r(require('@/apps/components/manage
 const userList = r => require.ensure([], () => r(require('@/apps/app/user/userList')), 'userList');
 const loginList = r => require.ensure([], () => r(require('@/apps/app/user/loginlist')), 'loginList');
 const addDomain = r => require.ensure([], () => r(require('@/apps/app/user/addDomain')), 'addDomain');
-/*const addShop = r => require.ensure([], () => r(require('@/apps/addShop')), 'addShop');
-const addGoods = r => require.ensure([], () => r(require('@/apps/addGoods')), 'addGoods');
-c*/
 
 const routes = [
 	{
@@ -44,16 +41,7 @@ const routes = [
 			path: '/loginList',
 			component: loginList,
 			meta: ['数据管理','用户', '用户登录记录']
-		}
-		/*,{
-			path: '/addShop',
-			component: addShop,
-			meta: ['添加数据', '添加商铺'],
-		},{
-			path: '/addGoods',
-			component: addGoods,
-			meta: ['添加数据', '添加商品'],
-		}*/]
+		}]
 	}
 ]
 

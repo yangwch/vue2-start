@@ -49,7 +49,7 @@
 </template>
 
 <script>
-	import {getUserList, getUserCount,getLoginList} from '@/api/getData'
+	import { getUserCount, getLoginList } from '@/api/getData'
 	import tablePlugin from './../../plugin/table/table'
 	export default {
 		data(){
@@ -80,7 +80,7 @@
 				
 			},
 			onSearch: function function_name(argument) {
-			  // body...
+				// body...
 			}
 		},
 	}

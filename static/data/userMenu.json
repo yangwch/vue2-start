@@ -3,7 +3,7 @@
 		{
 			"id": 1,"displayName": "监控子系统", "url": "", "icon": "el-icon-share",
 			"children": [
-				{ "id": 2, "displayName": "首页", "url": "/manage", "index": "manage", "icon": "el-icon-menu" },
+				{ "id": 2, "displayName": "首页", "url": "/manage", "index": "manage", "icon": "iconfont icon-all" },
 				{ "id": 3, "displayName": "数据管理", "url": "", "icon": "el-icon-document",
 					"children":[
 						{ "id":4,"displayName": "用户", "icon": "el-icon-document", "children": [
